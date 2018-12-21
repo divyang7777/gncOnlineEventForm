@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
+import 'package:angular_components/material_radio/material_radio.dart';
+import 'package:angular_components/material_radio/material_radio_group.dart';
 
 import 'todo_list_service.dart';
 
@@ -13,6 +15,8 @@ import 'todo_list_service.dart';
     MaterialCheckboxComponent,
     MaterialFabComponent,
     MaterialIconComponent,
+    MaterialRadioComponent,
+    MaterialRadioGroupComponent,
     materialInputDirectives,
     NgFor,
     NgIf,

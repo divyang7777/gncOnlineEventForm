@@ -1,14 +1,10 @@
 <!-- Components info: https://webdev.dartlang.org/components -->
 <div>
-  <material-input label="What do you need to do?"
-                  autoFocus floatingLabel style="width:80%"
-                  [(ngModel)]="newTodo"
-                  (keyup.enter)="add()">
+  <material-input label="What do you need to do?" autoFocus floatingLabel style="width:80%" [(ngModel)]="newTodo"
+    (keyup.enter)="add()">
   </material-input>
 
-  <material-fab mini raised
-                (trigger)="add()"
-                [disabled]="newTodo.isEmpty">
+  <material-fab mini raised (trigger)="add()" [disabled]="newTodo.isEmpty">
     <material-icon icon="add"></material-icon>
   </material-fab>
 </div>
@@ -19,13 +15,13 @@
 
 <div *ngIf="items.isNotEmpty">
   <ul>
-      <li *ngFor="let item of items; let i=index">
-        <material-checkbox #done materialTooltip="Mark item as done">
-        </material-checkbox>
-        <span [class.done]="done.checked">{{item}}</span>
-        <material-fab mini (trigger)="remove(i)">
-          <material-icon icon="delete"></material-icon>
-        </material-fab>
-      </li>
+    <li *ngFor="let item of items; let i=index">
+      <material-checkbox #done materialTooltip="Mark item as done">
+      </material-checkbox>
+      <span [class.done]="done.checked">{{item}}</span>
+      <material-fab mini (trigger)="remove(i)">
+        <material-icon icon="delete"></material-icon>
+      </material-fab>
+    </li>
   </ul>
 </div>
